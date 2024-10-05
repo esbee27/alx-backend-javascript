@@ -6,26 +6,29 @@ export default class Pricing {
       this.currency = currency;
     }
   
-    //getter for name
-    get name() {
-      return this._name;
+    //getter for amoumt
+    get amoumt() {
+      return this._amount;
     }
-    //set name
-    set name(value) {
-      this.name = value;
+    //set amount
+    set amount(value) {
+      this.amount = value;
     }
 
-    //getter for code
-    get code() {
-        return this._code;
+    //getter for currency
+    get currency() {
+        return this._currency;
     }
-    //set code
-    set code(value) {
-        this.code = value;
+    //set currency
+    set currency(value) {
+        this.currency = value;
     }
-  
 
-    displayFullCurrency() {
-        return `${this._name} (${this._code})`;
+    displayFullPrice() {
+        return `${this._amount} ${this.currency.displayFullCurrency()}`;
     }
-}  
+
+    static convertPrice(amount, conversionRate) {
+	    return amount * conversionRate;
+    }
+}
