@@ -51,4 +51,4 @@ Click to show/hide file contents
 .eslintrc.js
 Click to show/hide file contents
 and…
-Don’t forget to run $ npm install when you have the package.json
+Don’t forget to run $ npm install when you have the package.jsonNodeJS basic
